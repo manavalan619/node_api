@@ -10,7 +10,7 @@ const app = express();
 const port = 4000;
 
 // parse requests of content-type - applicaton/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
@@ -25,7 +25,7 @@ mongoose.connect(dbConfig.url, {
     useNewUrlParser: true
 }).then(() => {
     console.log("Successfully connected to the database");
-}).catch( err => {
+}).catch(err => {
     console.log("Could not connect to the database.", err);
     process.exit();
 });
@@ -33,7 +33,7 @@ mongoose.connect(dbConfig.url, {
 
 // define a root/default route
 app.get("/", (req, res) => {
-    res.json({"message":"Welcome to Employee CRUD"})
+    res.json({ "message": "Welcome to Employee CRUD" })
 });
 
 // Require Employee routes
