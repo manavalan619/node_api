@@ -2,5 +2,5 @@ const { connection } = require("mongoose")
 
 // set mongodb connection
 module.exports = {
-    url : "mongodb://localhost:27017/test"
+    url: "mongodb+srv://manavalan:manavalan@sampledemo.qo5jt.mongodb.net/<dbname>?retryWrites=true&w=majority"
 };
