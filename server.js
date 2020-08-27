@@ -7,7 +7,7 @@ const { urlencoded } = require("body-parser");
 const app = express();
 
 // setup server port
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 // parse requests of content-type - applicaton/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
